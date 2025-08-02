@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Al-Hikma Hospital</title>
+    <meta name="description" content="Schedule your medical appointment at Al-Hikma Hospital. Easy online booking for consultations with our experienced medical professionals.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚕</span>
+                    <span class="logo-text">Al-Hikma</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="doctors.html" class="nav-link" role="menuitem">Doctors</a></li>
+                <li role="none"><a href="appointments.html" class="nav-link active" role="menuitem">Appointments</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title" class="page-title">Book an Appointment</h1>
+                <p class="page-subtitle">Schedule your visit with our medical professionals</p>
+            </div>
+        </section>
+
+        <!-- Appointment Form Section -->
+        <section class="appointment-section" aria-labelledby="form-title">
+            <div class="container">
+                <div class="appointment-content">
+                    <!-- Form -->
+                    <div class="appointment-form-container">
+                        <h2 id="form-title" class="form-title">Schedule Your Appointment</h2>
+                        <form class="appointment-form" id="appointmentForm" novalidate action="#">
+                            <!-- Personal Information -->
+                            <fieldset class="form-fieldset">
+                                <legend class="fieldset-legend">Personal Information</legend>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-input" required aria-describedby="firstName-error">
+                                        <span class="error-message" id="firstName-error" role="alert"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-input" required aria-describedby="lastName-error">
+                                        <span class="error-message" id="lastName-error" role="alert"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" id="email" name="email" class="form-input" required aria-describedby="email-error">
+                                        <span class="error-message" id="email-error" role="alert"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" class="form-input" required aria-describedby="phone-error">
+                                        <span class="error-message" id="phone-error" role="alert"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dateOfBirth" class="form-label">Date of Birth *</label>
+                                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" required aria-describedby="dateOfBirth-error">
+                                    <span class="error-message" id="dateOfBirth-error" role="alert"></span>
+                                </div>
+                            </fieldset>
+
+                            <!-- Appointment Details -->
+                            <fieldset class="form-fieldset">
+                                <legend class="fieldset-legend">Appointment Details</legend>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="department" class="form-label">Department *</label>
+                                        <select id="department" name="department" class="form-select" required aria-describedby="department-error">
+                                            <option value="">Select Department</option>
+                                            <option value="cardiology">Cardiology</option>
+                                            <option value="neurology">Neurology</option>
+                                            <option value="orthopedics">Orthopedics</option>
+                                            <option value="pediatrics">Pediatrics</option>
+                                            <option value="oncology">Oncology</option>
+                                            <option value="radiology">Radiology</option>
+                                            <option value="surgery">Surgery</option>
+                                            <option value="womens-health">Women's Health</option>
+                                            <option value="general">General Medicine</option>
+                                        </select>
+                                        <span class="error-message" id="department-error" role="alert"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="doctor" class="form-label">Preferred Doctor</label>
+                                        <select id="doctor" name="doctor" class="form-select" aria-describedby="doctor-help">
+                                            <option value="">Any Available Doctor</option>
+                                        </select>
+                                        <span class="help-text" id="doctor-help">Select a department first to see available doctors</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="appointmentDate" class="form-label">Preferred Date *</label>
+                                        <input type="date" id="appointmentDate" name="appointmentDate" class="form-input" required aria-describedby="appointmentDate-error">
+                                        <span class="error-message" id="appointmentDate-error" role="alert"></span>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="appointmentTime" class="form-label">Preferred Time *</label>
+                                        <select id="appointmentTime" name="appointmentTime" class="form-select" required aria-describedby="appointmentTime-error">
+                                            <option value="">Select Time</option>
+                                            <option value="09:00">9:00 AM</option>
+                                            <option value="09:30">9:30 AM</option>
+                                            <option value="10:00">10:00 AM</option>
+                                            <option value="10:30">10:30 AM</option>
+                                            <option value="11:00">11:00 AM</option>
+                                            <option value="11:30">11:30 AM</option>
+                                            <option value="14:00">2:00 PM</option>
+                                            <option value="14:30">2:30 PM</option>
+                                            <option value="15:00">3:00 PM</option>
+                                            <option value="15:30">3:30 PM</option>
+                                            <option value="16:00">4:00 PM</option>
+                                            <option value="16:30">4:30 PM</option>
+                                        </select>
+                                        <span class="error-message" id="appointmentTime-error" role="alert"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="appointmentType" class="form-label">Appointment Type *</label>
+                                    <select id="appointmentType" name="appointmentType" class="form-select" required aria-describedby="appointmentType-error">
+                                            <option value="">Select Appointment Type</option>
+                                            <option value="consultation">Initial Consultation</option>
+                                            <option value="follow-up">Follow-up Visit</option>
+                                            <option value="routine-checkup">Routine Checkup</option>
+                                            <option value="urgent">Urgent Care</option>
+                                            <option value="screening">Health Screening</option>
+                                        </select>
+                                        <span class="error-message" id="appointmentType-error" role="alert"></span>
+                                    </div>
+
+                                <div class="form-group">
+                                    <label for="reason" class="form-label">Reason for Visit</label>
+                                    <textarea id="reason" name="reason" class="form-textarea" rows="4" placeholder="Please describe your symptoms or reason for the appointment" aria-describedby="reason-help"></textarea>
+                                    <span class="help-text" id="reason-help">This information helps us prepare for your visit</span>
+                                </div>
+                            </fieldset>
+
+                            <!-- Insurance Information -->
+                            <fieldset class="form-fieldset">
+                                <legend class="fieldset-legend">Insurance Information</legend>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="insurance" class="form-label">Insurance Provider</label>
+                                        <select id="insurance" name="insurance" class="form-select">
+                                            <option value="">Select Insurance Provider</option>
+                                            <option value="aetna">Aetna</option>
+                                            <option value="blue-cross">Blue Cross Blue Shield</option>
+                                            <option value="cigna">Cigna</option>
+                                            <option value="humana">Humana</option>
+                                            <option value="medicare">Medicare</option>
+                                            <option value="medicaid">Medicaid</option>
+                                            <option value="united">United Healthcare</option>
+                                            <option value="self-pay">Self Pay</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="policyNumber" class="form-label">Policy Number</label>
+                                        <input type="text" id="policyNumber" name="policyNumber" class="form-input" placeholder="Enter your policy number">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <!-- Additional Information -->
+                            <fieldset class="form-fieldset">
+                                <legend class="fieldset-legend">Additional Information</legend>
+                                
+                                <div class="form-group">
+                                    <label for="specialNeeds" class="form-label">Special Accommodations</label>
+                                    <textarea id="specialNeeds" name="specialNeeds" class="form-textarea" rows="3" placeholder="Please let us know if you need wheelchair access, interpreter services, or other accommodations"></textarea>
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="newPatient" name="newPatient" class="form-checkbox">
+                                    <label for="newPatient" class="checkbox-label">I am a new patient</label>
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="consent" name="consent" class="form-checkbox" required>
+                                    <label for="consent" class="checkbox-label">I consent to receive appointment reminders via email and SMS *</label>
+                                </div>
+                            </fieldset>
+
+                            <!-- Submit Button -->
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large">Book Appointment</button>
+                                <p class="form-note">* Required fields. We will contact you within 24 hours to confirm your appointment.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Appointment Info Sidebar -->
+                    <div class="appointment-info">
+                        <div class="info-card">
+                            <h3 class="info-title">Appointment Guidelines</h3>
+                            <ul class="info-list">
+                                <li>Please arrive 15 minutes early for your appointment</li>
+                                <li>Bring a valid photo ID and insurance card</li>
+                                <li>Bring a list of current medications</li>
+                                <li>Wear comfortable, loose-fitting clothing</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 class="info-title">Contact Information</h3>
+                            <div class="contact-details">
+                                <p><strong>Appointments:</strong><br>+1 (555) 123-CARE</p>
+                                <p><strong>Emergency:</strong><br>+1 (555) 112-CARE</p>
+                                <p><strong>Email:</strong><br>appointments@Al-Hikmahospital.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 class="info-title">Office Hours</h3>
+                            <div class="hours-details">
+                                <p><strong>Monday - Friday:</strong><br>8:00 AM - 6:00 PM</p>
+                                <p><strong>Saturday:</strong><br>9:00 AM - 4:00 PM</p>
+                                <p><strong>Sunday:</strong><br>10:00 AM - 2:00 PM</p>
+                                <p><strong>Emergency:</strong><br>24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Message (Hidden by default) -->
+        <div id="successMessage" class="success-message" role="alert" aria-live="polite" style="display: none;">
+            <div class="container">
+                <div class="success-content">
+                    <h2 class="success-title">Appointment Request Submitted!</h2>
+                    <p class="success-text">Thank you for choosing Al-Hikma Hospital. We have received your appointment request and will contact you within 24 hours to confirm your appointment details.</p>
+                    <p class="success-text">If you have any urgent medical needs, please call our emergency line at +1 (555) 112-CARE.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="logo-icon">⚕</span>
+                        <span class="logo-text">Al-Hikma</span>
+                    </div>
+                    <p class="footer-description">Providing quality healthcare with compassion and excellence since 1998.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <p>📍  The Breeze, Zaria 810103, Kaduna</p>
+                        <p>📞 +234 123 4567 890</p>
+                        <p>✉️ info@al-hikmahospital.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Hours</h3>
+                    <div class="hours-info">
+                        <p><strong>Emergency:</strong> 24/7</p>
+                        <p><strong>Outpatient:</strong> Mon-Fri 8AM-6PM</p>
+                        <p><strong>Weekend:</strong> Sat-Sun 9AM-4PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Al-Hikma Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/appointments.js"></script>
+</body>
+</html>

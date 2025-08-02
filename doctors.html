@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - Al-Hikma Hospital</title>
+    <meta name="description" content="Meet our experienced medical professionals at Al-Hikma Hospital. Board-certified doctors specializing in various medical fields.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚕</span>
+                    <span class="logo-text">Al-Hikma</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="doctors.html" class="nav-link active" role="menuitem">Doctors</a></li>
+                <li role="none"><a href="appointments.html" class="nav-link" role="menuitem">Appointments</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title" class="page-title">Our Medical Team</h1>
+                <p class="page-subtitle">Experienced professionals dedicated to your health and well-being</p>
+            </div>
+        </section>
+
+        <!-- Department Filter -->
+        <section class="filter-section" aria-labelledby="filter-title">
+            <div class="container">
+                <h2 id="filter-title" class="sr-only">Filter doctors by department</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Doctors</button>
+                    <button class="filter-btn" data-filter="cardiology">Cardiology</button>
+                    <button class="filter-btn" data-filter="neurology">Neurology</button>
+                    <button class="filter-btn" data-filter="orthopedics">Orthopedics</button>
+                    <button class="filter-btn" data-filter="pediatrics">Pediatrics</button>
+                    <button class="filter-btn" data-filter="emergency">Emergency</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Grid -->
+        <section class="doctors-section" aria-labelledby="doctors-title">
+            <div class="container">
+                <h2 id="doctors-title" class="sr-only">Medical Staff Directory</h2>
+                <div class="doctors-grid">
+                    <!-- Cardiology -->
+                    <div class="doctor-card" data-department="cardiology">
+                        <img src="assets/4.jfif" alt="Dr. Emily Carter, Cardiologist" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Emily Carter</h3>
+                            <p class="doctor-specialty">Cardiologist</p>
+                            <p class="doctor-credentials">MD, FACC</p>
+                            <p class="doctor-bio">Board-certified cardiologist with 15 years of experience in interventional cardiology and heart disease prevention.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> Harvard Medical School</p>
+                                <p><strong>Specialties:</strong> Interventional Cardiology, Heart Failure</p>
+                            </div>
+                            <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-department="cardiology">
+                        <img src="assets/5.jfif" alt="Dr. James Wilson, Cardiac Surgeon" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. James Wilson</h3>
+                            <p class="doctor-specialty">Cardiac Surgeon</p>
+                            <p class="doctor-credentials">MD, FACS</p>
+                            <p class="doctor-bio">Renowned cardiac surgeon specializing in complex heart surgeries and minimally invasive procedures.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> Johns Hopkins University</p>
+                                <p><strong>Specialties:</strong> Cardiac Surgery, Valve Repair</p>
+                            </div>
+                            <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </div>
+
+                    <!-- Neurology -->
+                    <div class="doctor-card" data-department="neurology">
+                        <img src="assets/6.jfif" alt="Dr. Lisa Park, Neurologist" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Lisa Park</h3>
+                            <p class="doctor-specialty">Neurologist</p>
+                            <p class="doctor-credentials">MD, PhD</p>
+                            <p class="doctor-bio">Expert in treating neurological disorders with a focus on stroke care and neurodegenerative diseases.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> Stanford University</p>
+                                <p><strong>Specialties:</strong> Stroke, Alzheimer's Disease</p>
+                            </div>
+                            <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-department="neurology">
+                        <img src="assets/7.jfif" alt="Dr. Robert Kim, Neurosurgeon" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Robert Kim</h3>
+                            <p class="doctor-specialty">Neurosurgeon</p>
+                            <p class="doctor-credentials">MD, FAANS</p>
+                            <p class="doctor-bio">Skilled neurosurgeon with expertise in brain and spine surgery, including minimally invasive techniques.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> Mayo Clinic</p>
+                                <p><strong>Specialties:</strong> Brain Surgery, Spine Surgery</p>
+                            </div>
+                            <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </div>
+
+                    <!-- Orthopedics -->
+                    <div class="doctor-card" data-department="orthopedics">
+                        <img src="assets/8.jfif" alt="Dr. Maria Gonzalez, Orthopedic Surgeon" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Maria Gonzalez</h3>
+                            <p class="doctor-specialty">Orthopedic Surgeon</p>
+                            <p class="doctor-credentials">MD, FAAOS</p>
+                            <p class="doctor-bio">Orthopedic surgeon specializing in joint replacement and sports medicine with over 12 years of experience.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> UCLA Medical School</p>
+                                <p><strong>Specialties:</strong> Joint Replacement, Sports Medicine</p>
+                            </div>
+                            <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-department="orthopedics">
+                        <img src="assets/9.jfif" alt="Dr. David Thompson, Spine Specialist" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. David Thompson</h3>
+                            <p class="doctor-specialty">Spine Specialist</p>
+                            <p class="doctor-credentials">MD, FAAOS</p>
+                            <p class="doctor-bio">Leading spine specialist with expertise in complex spinal disorders and minimally invasive spine surgery.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> University of Pennsylvania</p>
+                                <p><strong>Specialties:</strong> Spine Surgery, Pain Management</p>
+                            </div>
+                            <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </div>
+
+                    <!-- Pediatrics -->
+                    <div class="doctor-card" data-department="pediatrics">
+                        <img src="assets/4.jfif" alt="Dr. Jennifer Lee, Pediatrician" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Jennifer Lee</h3>
+                            <p class="doctor-specialty">Pediatrician</p>
+                            <p class="doctor-credentials">MD, FAAP</p>
+                            <p class="doctor-bio">Compassionate pediatrician dedicated to providing comprehensive healthcare for children from infancy through adolescence.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> Children's Hospital of Philadelphia</p>
+                                <p><strong>Specialties:</strong> General Pediatrics, Adolescent Medicine</p>
+                            </div>
+                            <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-department="pediatrics">
+                        <img src="assets/5.jfif" alt="Dr. Michael Brown, Pediatric Surgeon" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Michael Brown</h3>
+                            <p class="doctor-specialty">Pediatric Surgeon</p>
+                            <p class="doctor-credentials">MD, FACS, FAAP</p>
+                            <p class="doctor-bio">Specialized pediatric surgeon with expertise in minimally invasive surgical techniques for children.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> Boston Children's Hospital</p>
+                                <p><strong>Specialties:</strong> Pediatric Surgery, Neonatal Surgery</p>
+                            </div>
+                            <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Medicine -->
+                    <div class="doctor-card" data-department="emergency">
+                        <img src="assets/6.jfif" alt="Dr. Sarah Davis, Emergency Medicine Physician" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Sarah Davis</h3>
+                            <p class="doctor-specialty">Emergency Medicine</p>
+                            <p class="doctor-credentials">MD, FACEP</p>
+                            <p class="doctor-bio">Board-certified emergency medicine physician with extensive experience in trauma care and critical care medicine.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> University of Michigan</p>
+                                <p><strong>Specialties:</strong> Emergency Medicine, Trauma Care</p>
+                            </div>
+                            <a href="tel:+1-555-112-CARE" class="btn btn-emergency">Emergency Contact</a>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card" data-department="emergency">
+                        <img src="assets/7.jfif" alt="Dr. Kevin Martinez, Trauma Surgeon" class="doctor-photo" loading="lazy">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Kevin Martinez</h3>
+                            <p class="doctor-specialty">Trauma Surgeon</p>
+                            <p class="doctor-credentials">MD, FACS</p>
+                            <p class="doctor-bio">Experienced trauma surgeon specializing in emergency surgical procedures and critical care management.</p>
+                            <div class="doctor-details">
+                                <p><strong>Education:</strong> University of Texas</p>
+                                <p><strong>Specialties:</strong> Trauma Surgery, Critical Care</p>
+                            </div>
+                            <a href="tel:+1-555-112-CARE" class="btn btn-emergency">Emergency Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="logo-icon">⚕</span>
+                        <span class="logo-text">Al-Hikma</span>
+                    </div>
+                    <p class="footer-description">Providing quality healthcare with compassion and excellence since 1998.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <p>📍  The Breeze, Zaria 810103, Kaduna</p>
+                        <p>📞 +234 123 4567 890</p>
+                        <p>✉️ info@al-hikmahospital.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Hours</h3>
+                    <div class="hours-info">
+                        <p><strong>Emergency:</strong> 24/7</p>
+                        <p><strong>Outpatient:</strong> Mon-Fri 8AM-6PM</p>
+                        <p><strong>Weekend:</strong> Sat-Sun 9AM-4PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Al-Hikma Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/doctors.js"></script>
+</body>
+</html>
